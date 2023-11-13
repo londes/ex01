@@ -3,11 +3,12 @@ import './App.css';
 let App = () => {
   return (
     <div className="App">
-      <header>
+
+      <header className="header">
         <h1>Welcome to my shop</h1>
         <div>
           <div className="nav-container">
-            <div className="logo"></div>
+            {/* <div className="logo"></div> */}
             <div className="link">Home</div>
             <div className="link">Shop</div>
             <div className="link">Custom</div>
@@ -23,16 +24,31 @@ let App = () => {
           <div className="products-container">
             {products.map((ele, idx) => <div className="product" key={idx}>
               <img src={ele.image}></img>
+              <div className="prod-footer">
+                <div className="prod-footer-prod-name"><p>{ele.product}</p></div>
+                <div className='prod-footer-prod-price'><p>{ele.price}</p></div>
+              </div>
             </div>)}
           </div>
         </div>
-        <div className="products-container">
+        <div className="products-category>">
           <h1>Best Sellers</h1>
-          {products.filter(ele => ele.bestSeller).map((ele, idx) => <div className="product" key={idx}>{ele.category}</div>)}
+          <div className="products-container">
+            {products.filter(ele => ele.bestSeller).map((ele, idx) => <div className="product" key={idx}>
+              <img src={ele.image}></img>
+              <div className="prod-footer">
+                <div className="prod-footer-prod-name"><p>{ele.product}</p></div>
+                <div className='prod-footer-prod-price'><p>{ele.price}</p></div>
+              </div>
+            </div>)}
+          </div>
         </div>
       </div>
 
-      <footer>All rights reserved</footer>
+      <footer>
+      All rights reserved
+      </footer>
+
     </div>
   )
   }
