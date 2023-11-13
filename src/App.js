@@ -1,7 +1,7 @@
 import './App.css';
 
 let App = () => {
-  return products.map(ele => <p>{ele.category}</p>)
+  return products.map((ele, idx) => <p key={idx}>{ele.category}</p>)
   }
 
 const products = [
