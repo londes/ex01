@@ -1,7 +1,38 @@
 import './App.css';
 
 let App = () => {
-  return products.map((ele, idx) => <p key={idx}>{ele.category}</p>)
+  return (
+    <div className="App">
+      <header>
+        <h1>Welcome to my shop</h1>
+        <div>
+          <div className="nav-container">
+            <div className="logo"></div>
+            <div className="link">Home</div>
+            <div className="link">Shop</div>
+            <div className="link">Custom</div>
+            <div className="link">Deals</div>
+            <div className="link">Contact</div>
+          </div>
+        </div>
+      </header>
+
+      <div className="main-products-container">
+        <div className="products-container-our">
+          <h1>Our Products</h1>
+          {products.map((ele, idx) => <div className="product" key={idx}>
+              <h1>{ele.product}</h1>
+            </div>)}
+        </div>
+        <div className="products-container-bestseller">
+          <h1>Best Sellers</h1>
+          {products.filter(ele => ele.bestSeller).map((ele, idx) => <div className="product" key={idx}>{ele.category}</div>)}
+        </div>
+      </div>
+
+      <footer>All rights reserved</footer>
+    </div>
+  )
   }
 
 const products = [
