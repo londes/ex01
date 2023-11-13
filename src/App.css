@@ -9,11 +9,12 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 90vw;
+  width: 85vw;
   margin: auto;
 }
 
 .header h1 {
+  margin: 4vh 0 0 2vh;
   text-align: center;
 }
 
@@ -32,9 +33,9 @@
   flex-direction: column;
 }
 
-/* .products-container {
+.products-container {
   padding: 4vh 0 4vh 0;
-} */
+}
 
 .products-container{
   display: grid;
