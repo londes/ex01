@@ -18,13 +18,15 @@ let App = () => {
       </header>
 
       <div className="main-products-container">
-        <div className="products-container-our">
+        <div className="product-category">
           <h1>Our Products</h1>
-          {products.map((ele, idx) => <div className="product" key={idx}>
-              <h1>{ele.product}</h1>
+          <div className="products-container">
+            {products.map((ele, idx) => <div className="product" key={idx}>
+              <img src={ele.image}></img>
             </div>)}
+          </div>
         </div>
-        <div className="products-container-bestseller">
+        <div className="products-container">
           <h1>Best Sellers</h1>
           {products.filter(ele => ele.bestSeller).map((ele, idx) => <div className="product" key={idx}>{ele.category}</div>)}
         </div>
