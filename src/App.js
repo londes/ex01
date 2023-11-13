@@ -1,25 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+let App = () => {
+  return products.map(ele => <p>{ele.category}</p>)
+  }
+
+const products = [
+  {
+    product: "flash t-shirt",
+    price: 27.5,
+    category: "t-shirts",
+    bestSeller: false,
+    image:
+      "https://images-na.ssl-images-amazon.com/images/I/61ZipyCaAKL._AC_UX385_.jpg",
+    onSale: true,
+  },
+  {
+    product: "batman t-shirt",
+    price: 22.5,
+    category: "t-shirts",
+    bestSeller: true,
+    image:
+      "https://s1.thcdn.com/productimg/1600/1600/11676326-1444552242012324.png",
+    onSale: false,
+  },
+  {
+    product: "superman hat",
+    price: 13.9,
+    category: "hats",
+    bestSeller: true,
+    image:
+      "https://banner2.kisspng.com/20180429/rqe/kisspng-baseball-cap-superman-logo-batman-hat-5ae5ef317f8366.9727520615250184175223.jpg",
+    onSale: false,
+  },
+];
 
 export default App;
